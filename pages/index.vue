@@ -283,10 +283,10 @@
 <script setup>
 // Meta tags
 useSeoMeta({
-  title: 'Utopia Minds - Personal Blog',
-  description: 'Exploring ideas, technology, and insights that shape our digital future. Join us on a journey of discovery and innovation.',
-  ogTitle: 'Utopia Minds - Personal Blog',
-  ogDescription: 'Exploring ideas, technology, and insights that shape our digital future. Join us on a journey of discovery and innovation.',
+  title: 'Utopia Minds - Nurturing minds, fostering growth',
+  description: 'Utopia Minds is here to remind you: your thoughts matter, your journey matters, and your mind is worth exploring.',
+  ogTitle: 'Utopia Minds - Nurturing minds, fostering growth',
+  ogDescription: 'Utopia Minds is here to remind you: your thoughts matter, your journey matters, and your mind is worth exploring.',
   ogType: 'website',
   twitterCard: 'summary_large_image'
 })

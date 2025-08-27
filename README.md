@@ -1,4 +1,4 @@
-# Utopia Minds - Personal Blog
+# Utopia Minds - Nurturing minds, fostering growth
 
 A modern, production-ready personal blogging website built with Nuxt.js, MongoDB Atlas, and deployed on Vercel.
 

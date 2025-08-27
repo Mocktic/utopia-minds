@@ -26,14 +26,14 @@ export default defineNuxtConfig({
       meta: [
         { charset: 'utf-8' },
         { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-        { name: 'description', content: 'Personal blog exploring ideas, technology, and insights from Utopia Minds' },
+        { name: 'description', content: 'Utopia Minds is here to remind you- your thoughts matter, your journey matters, and your mind is worth exploring.' },
         { name: 'author', content: 'Utopia Minds' },
         { property: 'og:type', content: 'website' },
-        { property: 'og:title', content: 'Utopia Minds - Personal Blog' },
-        { property: 'og:description', content: 'Personal blog exploring ideas, technology, and insights from Utopia Minds' },
+        { property: 'og:title', content: 'Utopia Minds - Nurturing minds, fostering growth' },
+        { property: 'og:description', content: 'Utopia Minds is here to remind you, your thoughts matter, your journey matters, and your mind is worth exploring.' },
         { name: 'twitter:card', content: 'summary_large_image' },
-        { name: 'twitter:title', content: 'Utopia Minds - Personal Blog' },
-        { name: 'twitter:description', content: 'Personal blog exploring ideas, technology, and insights from Utopia Minds' }
+        { name: 'twitter:title', content: 'Utopia Minds - Nurturing minds, fostering growth' },
+        { name: 'twitter:description', content: 'Utopia Minds is here to remind you- your thoughts matter, your journey matters, and your mind is worth exploring.' }
       ],
       link: [
         { rel: 'icon', type: 'image/png', href: '/favicon.png' },
