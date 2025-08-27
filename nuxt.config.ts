@@ -22,7 +22,7 @@ export default defineNuxtConfig({
   },
   app: {
     head: {
-      title: 'Utopia Minds - Personal Blog',
+      title: 'Utopia Minds - Nurturing minds, fostering growth',
       meta: [
         { charset: 'utf-8' },
         { name: 'viewport', content: 'width=device-width, initial-scale=1' },
