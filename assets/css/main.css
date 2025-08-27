@@ -1,0 +1,209 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap');
+
+@layer base {
+  html {
+    font-family: 'Inter', sans-serif;
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-slate-50 dark:bg-slate-900 text-slate-900 dark:text-slate-100 transition-colors duration-500;
+    font-feature-settings: 'cv02', 'cv03', 'cv04', 'cv11';
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: 'Playfair Display', serif;
+    @apply font-medium tracking-tight;
+  }
+}
+
+@layer components {
+  .utopia-gradient {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
+  }
+
+  .utopia-gradient-subtle {
+    background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 50%, #cbd5e1 100%);
+  }
+
+  .utopia-gradient-dark {
+    background: linear-gradient(135deg, #1e293b 0%, #334155 50%, #475569 100%);
+  }
+
+  .utopia-text-gradient {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
+    @apply bg-clip-text text-transparent;
+  }
+
+  .utopia-card {
+    @apply bg-white/80 dark:bg-slate-800/80 backdrop-blur-sm rounded-2xl shadow-sm border border-slate-200/50 dark:border-slate-700/50 transition-all duration-500 hover:shadow-xl hover:shadow-slate-200/20 dark:hover:shadow-slate-900/20;
+  }
+
+  .utopia-card-elevated {
+    @apply bg-white dark:bg-slate-800 rounded-3xl shadow-2xl shadow-slate-200/30 dark:shadow-slate-900/30 border border-slate-200/30 dark:border-slate-700/30 transition-all duration-500 hover:shadow-2xl hover:-translate-y-1;
+  }
+
+  .utopia-button {
+    @apply px-8 py-4 rounded-2xl font-medium transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-indigo-500/50 focus:ring-offset-2 focus:ring-offset-white dark:focus:ring-offset-slate-900;
+  }
+
+  .utopia-button-primary {
+    @apply utopia-button utopia-gradient text-white hover:shadow-2xl hover:shadow-indigo-500/25 transform hover:-translate-y-1 active:translate-y-0 whitespace-nowrap inline-flex items-center justify-center;
+  }
+
+  .utopia-button-secondary {
+    @apply utopia-button bg-slate-100 dark:bg-slate-700 text-slate-900 dark:text-slate-100 hover:bg-slate-200 dark:hover:bg-slate-600 hover:shadow-lg whitespace-nowrap inline-flex items-center justify-center;
+  }
+
+  .utopia-button-ghost {
+    @apply utopia-button bg-transparent text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 hover:text-slate-900 dark:hover:text-slate-100 whitespace-nowrap inline-flex items-center justify-center;
+  }
+
+  .prose-utopia {
+    @apply prose prose-lg prose-slate dark:prose-invert max-w-none;
+    @apply prose-headings:font-medium prose-headings:tracking-tight;
+    @apply prose-h1:text-4xl prose-h1:leading-tight prose-h2:text-3xl prose-h2:leading-tight prose-h3:text-2xl prose-h3:leading-snug;
+    @apply prose-p:leading-relaxed prose-p:text-slate-700 dark:prose-p:text-slate-300;
+    @apply prose-a:text-indigo-600 dark:prose-a:text-indigo-400 prose-a:no-underline hover:prose-a:underline prose-a:font-medium;
+    @apply prose-strong:text-slate-900 dark:prose-strong:text-slate-100 prose-strong:font-semibold;
+    @apply prose-code:bg-slate-100 dark:prose-code:bg-slate-800 prose-code:px-2 prose-code:py-1 prose-code:rounded-lg prose-code:font-mono prose-code:text-sm;
+    @apply prose-pre:bg-slate-900 prose-pre:border prose-pre:border-slate-700 prose-pre:rounded-2xl;
+    @apply prose-blockquote:border-l-4 prose-blockquote:border-indigo-500 prose-blockquote:bg-indigo-50/50 dark:prose-blockquote:bg-indigo-900/20 prose-blockquote:rounded-r-xl prose-blockquote:py-4 prose-blockquote:px-6;
+  }
+
+  .prose-utopia h1,
+  .prose-utopia h2,
+  .prose-utopia h3,
+  .prose-utopia h4,
+  .prose-utopia h5,
+  .prose-utopia h6 {
+    @apply font-playfair;
+  }
+
+  /* Rich text editor specific styles */
+  .prose-utopia ul {
+    @apply list-disc list-inside;
+  }
+
+  .prose-utopia ol {
+    @apply list-decimal list-inside;
+  }
+
+  .prose-utopia img {
+    @apply rounded-lg shadow-md mx-auto;
+  }
+
+  .prose-utopia hr {
+    @apply border-slate-300 dark:border-slate-600 my-8;
+  }
+
+  .psychology-accent {
+    @apply text-emerald-600 dark:text-emerald-400;
+  }
+
+  .psychology-bg {
+    @apply bg-emerald-50 dark:bg-emerald-900/20;
+  }
+
+  .psychology-border {
+    @apply border-emerald-200 dark:border-emerald-800;
+  }
+
+  .mindfulness-gradient {
+    background: linear-gradient(135deg, #10b981 0%, #059669 50%, #047857 100%);
+  }
+
+  .animate-fade-in {
+    animation: fadeIn 0.8s ease-out;
+  }
+
+  .animate-slide-up {
+    animation: slideUp 0.8s ease-out;
+  }
+
+  .animate-float {
+    animation: float 6s ease-in-out infinite;
+  }
+
+  .animate-pulse-slow {
+    animation: pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  }
+
+  .glass-effect {
+    @apply bg-white/10 backdrop-blur-md border border-white/20;
+  }
+
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .reading-width {
+    max-width: 65ch;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes float {
+
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-slate-100 dark:bg-slate-800;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-slate-300 dark:bg-slate-600 rounded-full;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-slate-400 dark:bg-slate-500;
+}
+
+/* Selection styling */
+::selection {
+  @apply bg-indigo-200 dark:bg-indigo-800 text-indigo-900 dark:text-indigo-100;
+}

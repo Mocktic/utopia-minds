@@ -1,0 +1,50 @@
+{
+  "name": "utopia-minds-blog",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "A personal blogging website - Utopia Minds",
+  "scripts": {
+    "dev": "nuxt dev",
+    "build": "nuxt build",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare",
+    "lint": "eslint --ext .js,.vue .",
+    "lint:fix": "eslint --ext .js,.vue . --fix",
+    "format": "prettier --write .",
+    "create-admin": "node scripts/create-admin.js",
+    "seed-blogs": "node scripts/seed-blogs.js"
+  },
+  "dependencies": {
+    "@nuxt/icon": "^1.0.0",
+    "@pinia/nuxt": "^0.5.1",
+    "@tailwindcss/typography": "^0.5.10",
+    "@tiptap/extension-color": "^3.3.0",
+    "@tiptap/extension-highlight": "^3.3.0",
+    "@tiptap/extension-image": "^3.3.0",
+    "@tiptap/extension-link": "^3.3.0",
+    "@tiptap/extension-subscript": "^3.3.0",
+    "@tiptap/extension-superscript": "^3.3.0",
+    "@tiptap/extension-text-align": "^3.3.0",
+    "@tiptap/extension-text-style": "^3.3.0",
+    "@tiptap/extension-underline": "^3.3.0",
+    "@tiptap/starter-kit": "^3.3.0",
+    "@tiptap/vue-3": "^3.3.0",
+    "@vueuse/nuxt": "^10.5.0",
+    "bcryptjs": "^2.4.3",
+    "dotenv": "^17.2.1",
+    "jsonwebtoken": "^9.0.2",
+    "mongodb": "^6.3.0",
+    "nuxt": "^3.8.4",
+    "pinia": "^2.1.7",
+    "vue": "^3.3.8",
+    "vue-router": "^4.2.5"
+  },
+  "devDependencies": {
+    "@nuxt/devtools": "latest",
+    "@nuxtjs/eslint-config-typescript": "^12.1.0",
+    "@nuxtjs/tailwindcss": "^6.8.4",
+    "eslint": "^8.54.0",
+    "prettier": "^3.1.0",
+    "typescript": "^5.3.2"
+  }
+}
