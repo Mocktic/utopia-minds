@@ -56,27 +56,13 @@
 
       <!-- Cover Image -->
       <div class="utopia-card p-6">
-        <label for="coverImage" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
-          Cover Image URL
-        </label>
-        <input
-          id="coverImage"
+        <ImageUpload 
           v-model="form.coverImage"
-          type="url"
-          class="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-900 dark:text-gray-100 focus:ring-2 focus:ring-purple-500 focus:border-transparent"
+          label="Cover Image"
           placeholder="https://example.com/image.jpg"
+          :preview-alt="form.title || 'Cover image preview'"
+          help-text="Enter an image URL or upload a file from your computer. Supported formats: JPEG, PNG, WebP, GIF. Max size: 5MB."
         />
-        <div v-if="form.coverImage" class="mt-4">
-          <img 
-            :src="form.coverImage" 
-            :alt="form.title"
-            class="w-full h-48 object-cover rounded-lg"
-            @error="imageError = true"
-          />
-          <p v-if="imageError" class="mt-2 text-sm text-red-600 dark:text-red-400">
-            Failed to load image. Please check the URL.
-          </p>
-        </div>
       </div>
 
       <!-- Category and Tags -->
@@ -90,7 +76,7 @@
             v-model="form.category"
             type="text"
             class="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-900 dark:text-gray-100 focus:ring-2 focus:ring-purple-500 focus:border-transparent"
-            placeholder="e.g., Technology, Design, Tutorial"
+            placeholder="e.g., Mental Health, Personal Growth"
           />
         </div>
 
@@ -103,7 +89,7 @@
             v-model="tagsInput"
             type="text"
             class="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-900 dark:text-gray-100 focus:ring-2 focus:ring-purple-500 focus:border-transparent"
-            placeholder="javascript, vue, tutorial (comma separated)"
+            placeholder="mental heath, trauma, etc. (comma separated)"
           />
           <p class="mt-2 text-sm text-gray-500 dark:text-gray-400">
             Separate tags with commas
@@ -223,7 +209,6 @@ const router = useRouter()
 
 // Reactive data
 const saving = ref(false)
-const imageError = ref(false)
 
 const form = ref({
   title: '',
@@ -237,10 +222,7 @@ const form = ref({
 
 const tagsInput = ref('')
 
-// Watch for image URL changes to reset error state
-watch(() => form.value.coverImage, () => {
-  imageError.value = false
-})
+
 
 
 
